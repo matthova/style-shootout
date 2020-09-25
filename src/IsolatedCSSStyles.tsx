@@ -20,10 +20,22 @@ export const TitleArea = styled("h1")`
 
 export const TitleBoldText = styled("h1")`
   ${(p) => p.theme.typography.headingBold0}
+  @media only screen and (min-width: 768px) {
+    ${(p) => p.theme.typography.headingBold2}
+  }
+  @media only screen and (min-width: 1024px) {
+    ${(p) => p.theme.typography.headingBold5}
+  }
 `;
 
 export const TitleText = styled("span")`
   ${(p) => p.theme.typography.heading0}
+  @media only screen and (min-width: 768px) {
+    ${(p) => p.theme.typography.heading2}
+  }
+  @media only screen and (min-width: 1024px) {
+    ${(p) => p.theme.typography.heading5}
+  }
 `;
 
 export const InputArea = styled("div")`
@@ -41,4 +53,8 @@ export const Input = styled(InputDS)`
 
 export const Footer = styled("div")`
   margin-top: auto;
+  ${(p) => p.theme.typography.paragraph0}
+  @media only screen and (min-width: 768px) {
+    ${(p) => p.theme.typography.paragraph1}
+  }
 `;

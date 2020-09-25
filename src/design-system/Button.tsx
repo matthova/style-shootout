@@ -1,20 +1,37 @@
 import React from "react";
-import { width, WidthProps } from "styled-system";
+import { width, ResponsiveValue, WidthProps } from "styled-system";
 import { css, styled, Theme } from "./theme";
 
+type ButtonSizes = "small" | "medium" | "large";
+
 export type ButtonStyleProps = {
-  size: "medium";
+  size: ResponsiveValue<ButtonSizes>;
   variant: "primary";
   theme: Theme;
 } & WidthProps<Theme, number | string>;
 
 const sizeStyles = ({ size }: ButtonStyleProps) => {
   switch (size) {
+    case "small":
+      return css`
+        height: 32px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        ${(p) => p.theme.typography.heading0}
+      `;
     case "medium":
       return css`
         height: 48px;
         padding: 8px 16px;
         border-radius: 4px;
+        ${(p) => p.theme.typography.heading1}
+      `;
+    case "large":
+      return css`
+        height: 64px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        ${(p) => p.theme.typography.heading1}
       `;
     default:
       return "";
