@@ -45,7 +45,9 @@ export const LayoutProps: React.FC = () => {
           Submit
         </Button>
       </Stack>
-      <Box marginTop="auto">Important Footer Information</Box>
+      <Text typography="paragraph0" marginTop="auto">
+        Important Footer Information
+      </Text>
     </Box>
   );
 };

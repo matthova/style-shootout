@@ -60,7 +60,4 @@ export const Input = styled(InputDS)`
 export const Footer = styled("div")`
   margin-top: auto;
   ${(p) => p.theme.typography.paragraph0}
-  @media only screen and (min-width: 768px) {
-    ${(p) => p.theme.typography.paragraph1}
-  }
 `;

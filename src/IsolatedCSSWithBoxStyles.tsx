@@ -49,7 +49,7 @@ export const Input = styled(InputDS)`
 `;
 
 export const Footer = styled(Text).attrs({
-  typography: { mobile: "paragraph0", tablet: "paragraph1" },
+  typography: "paragraph0",
 })`
   margin-top: auto;
 `;
