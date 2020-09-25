@@ -24,6 +24,7 @@ export const LayoutProps: React.FC = () => {
         >
           This form is very important
           <Text
+            as="span"
             typography={{
               mobile: "heading0",
               tablet: "heading2",
