@@ -1,6 +1,7 @@
 import React from "react";
+import { FlattenInterpolation, ThemeProps } from "styled-components";
 import { width, ResponsiveValue, WidthProps } from "styled-system";
-import { css, styled, Theme } from "./theme";
+import { BreakpointObject, css, styled, Theme } from "./theme";
 
 type ButtonSizes = "small" | "medium" | "large";
 
@@ -10,32 +11,51 @@ export type ButtonStyleProps = {
   theme: Theme;
 } & WidthProps<Theme, number | string>;
 
-const sizeStyles = ({ size }: ButtonStyleProps) => {
-  switch (size) {
-    case "small":
-      return css`
-        height: 32px;
-        padding: 8px 16px;
-        border-radius: 4px;
-        ${(p) => p.theme.typography.heading0}
-      `;
-    case "medium":
-      return css`
-        height: 48px;
-        padding: 8px 16px;
-        border-radius: 4px;
-        ${(p) => p.theme.typography.heading1}
-      `;
-    case "large":
-      return css`
-        height: 64px;
-        padding: 8px 16px;
-        border-radius: 4px;
-        ${(p) => p.theme.typography.heading1}
-      `;
-    default:
-      return "";
+const buttonSizes: Record<
+  ButtonSizes,
+  FlattenInterpolation<ThemeProps<Theme>>
+> = {
+  large: css`
+    height: 64px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    ${(p) => p.theme.typography.heading1}
+  `,
+  medium: css`
+    height: 48px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    ${(p) => p.theme.typography.heading1}
+  `,
+  small: css`
+    height: 32px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    ${(p) => p.theme.typography.heading0}
+  `,
+};
+const sizeStyles = ({ size, theme }: ButtonStyleProps) => {
+  if (typeof size === "string") {
+    return buttonSizes[size];
   }
+
+  return Object.keys(theme.breakpoints).map((breakpointKey) => {
+    // eslint-disable-next-line
+    // @ts-ignore
+    if (size[breakpointKey] == null) {
+      return "";
+    }
+    // eslint-disable-next-line
+    // @ts-ignore
+    const buttonSizeStyle = buttonSizes[size[breakpointKey]];
+    return css`
+      @media screen and (min-width: ${theme.breakpoints[
+          breakpointKey as keyof BreakpointObject
+        ]}) {
+        ${buttonSizeStyle}
+      }
+    `;
+  });
 };
 
 const variantStyles = ({ variant }: ButtonStyleProps) => {
@@ -53,6 +73,9 @@ const variantStyles = ({ variant }: ButtonStyleProps) => {
 const ButtonStyles = styled("button")<ButtonStyleProps>`
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   ${width}
   ${sizeStyles}
   ${variantStyles}

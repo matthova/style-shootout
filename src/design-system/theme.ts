@@ -54,7 +54,6 @@ const typography = {
     font-weight: 400;
     line-height: 54px;
     letter-spacing: 1.84px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading5: css`
     font-family: ${fontFamily};
@@ -62,7 +61,6 @@ const typography = {
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 1.68px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading4: css`
     font-family: ${fontFamily};
@@ -70,7 +68,6 @@ const typography = {
     font-weight: 400;
     line-height: 44px;
     letter-spacing: 1.52px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading3: css`
     font-family: ${fontFamily};
@@ -78,7 +75,6 @@ const typography = {
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 1.36px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading2: css`
     font-family: ${fontFamily};
@@ -86,7 +82,6 @@ const typography = {
     font-weight: 400;
     line-height: 36px;
     letter-spacing: 1.2px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading1: css`
     font-family: ${fontFamily};
@@ -94,7 +89,6 @@ const typography = {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 1.04px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   heading0: css`
     font-family: ${fontFamily};
@@ -102,7 +96,6 @@ const typography = {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.8px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold7: css`
     font-family: ${fontFamily};
@@ -117,7 +110,6 @@ const typography = {
     font-weight: 700;
     line-height: 54px;
     letter-spacing: 1.84px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold5: css`
     font-family: ${fontFamily};
@@ -125,7 +117,6 @@ const typography = {
     font-weight: 700;
     line-height: 50px;
     letter-spacing: 1.68px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold4: css`
     font-family: ${fontFamily};
@@ -133,7 +124,6 @@ const typography = {
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 1.52px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold3: css`
     font-family: ${fontFamily};
@@ -141,7 +131,6 @@ const typography = {
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 1.36px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold2: css`
     font-family: ${fontFamily};
@@ -149,7 +138,6 @@ const typography = {
     font-weight: 700;
     line-height: 36px;
     letter-spacing: 1.2px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold1: css`
     font-family: ${fontFamily};
@@ -157,7 +145,6 @@ const typography = {
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 1.04px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold0: css`
     font-family: ${fontFamily};
@@ -165,7 +152,6 @@ const typography = {
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0.8px;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   paragraph0: css`
     font-family: ${fontFamily};
@@ -173,7 +159,6 @@ const typography = {
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   paragraph1: css`
     font-family: ${fontFamily};
@@ -181,7 +166,6 @@ const typography = {
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
   paragraph2: css`
     font-family: ${fontFamily};
@@ -189,7 +173,6 @@ const typography = {
     font-weight: 400;
     line-height: 26px;
     letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
   `,
 };
 
@@ -199,9 +182,9 @@ export type BreakpointObject = Record<
 >;
 
 export const breakpoints: BreakpointObject = {
-  mobile: "0px",
-  tablet: "768px",
-  desktop: "1024px",
+  mobile: "320px",
+  tablet: "767px",
+  desktop: "1023px",
 };
 
 // using blank object for space to prevent using default styled-system space value
