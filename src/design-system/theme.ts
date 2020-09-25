@@ -30,25 +30,25 @@ const hues = {
 
 const colors = {
   primary: hues.violet,
-  onPrimary: hues.shade0000,
-  background: hues.shade0100,
-  onBackground: hues.shade1100,
-  surface: hues.shade0300,
-  onSurface: hues.shade1100,
+  onPrimary: hues.shade1100,
+  background: hues.shade1000,
+  onBackground: hues.shade0200,
+  surface: hues.shade0800,
+  onSurface: hues.shade0200,
 };
 
 const fontFamily =
   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;";
 
 const typography = {
-  heading0: css`
+  heading7: css`
     font-family: ${fontFamily};
     font-size: 50px;
     font-weight: 400;
     line-height: 70px;
     letter-spacing: 2px;
   `,
-  heading1: css`
+  heading6: css`
     font-family: ${fontFamily};
     font-size: 46px;
     font-weight: 400;
@@ -56,7 +56,7 @@ const typography = {
     letter-spacing: 1.84px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
-  heading2: css`
+  heading5: css`
     font-family: ${fontFamily};
     font-size: 42px;
     font-weight: 400;
@@ -64,7 +64,7 @@ const typography = {
     letter-spacing: 1.68px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
-  heading3: css`
+  heading4: css`
     font-family: ${fontFamily};
     font-size: 38px;
     font-weight: 400;
@@ -72,7 +72,7 @@ const typography = {
     letter-spacing: 1.52px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
-  heading4: css`
+  heading3: css`
     font-family: ${fontFamily};
     font-size: 34px;
     font-weight: 400;
@@ -80,7 +80,7 @@ const typography = {
     letter-spacing: 1.36px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
-  heading5: css`
+  heading2: css`
     font-family: ${fontFamily};
     font-size: 30px;
     font-weight: 400;
@@ -88,74 +88,90 @@ const typography = {
     letter-spacing: 1.2px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
-  heading6: css`
+  heading1: css`
     font-family: ${fontFamily};
     font-size: 26px;
     font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.04px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  heading0: css`
+    font-family: ${fontFamily};
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold7: css`
+    font-family: ${fontFamily};
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 2px;
+  `,
+  headingBold6: css`
+    font-family: ${fontFamily};
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 1.84px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold5: css`
+    font-family: ${fontFamily};
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 1.68px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold4: css`
+    font-family: ${fontFamily};
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 1.52px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold3: css`
+    font-family: ${fontFamily};
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 1.36px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold2: css`
+    font-family: ${fontFamily};
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 1.2px;
+    color: ${(p) => p.theme.colors.onBackground};
+  `,
+  headingBold1: css`
+    font-family: ${fontFamily};
+    font-size: 26px;
+    font-weight: 700;
     line-height: 30px;
     letter-spacing: 1.04px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
   headingBold0: css`
     font-family: ${fontFamily};
-    font-size: 50px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 70px;
-    letter-spacing: 2px;
-  `,
-  headingBold1: css`
-    font-family: ${fontFamily};
-    font-size: 46px;
-    font-weight: 700;
-    line-height: 54px;
-    letter-spacing: 1.84px;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  headingBold2: css`
-    font-family: ${fontFamily};
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 50px;
-    letter-spacing: 1.68px;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  headingBold3: css`
-    font-family: ${fontFamily};
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 44px;
-    letter-spacing: 1.52px;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  headingBold4: css`
-    font-family: ${fontFamily};
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 40px;
-    letter-spacing: 1.36px;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  headingBold5: css`
-    font-family: ${fontFamily};
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 1.2px;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  headingBold6: css`
-    font-family: ${fontFamily};
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 1.04px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
     color: ${(p) => p.theme.colors.onBackground};
   `,
   paragraph0: css`
     font-family: ${fontFamily};
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 20px;
     letter-spacing: 0;
     color: ${(p) => p.theme.colors.onBackground};
   `,
@@ -169,49 +185,9 @@ const typography = {
   `,
   paragraph2: css`
     font-family: ${fontFamily};
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  paragraphBold0: css`
-    font-family: ${fontFamily};
-    font-size: 20px;
-    font-weight: 700;
     line-height: 26px;
-    letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  paragraphBold1: css`
-    font-family: ${fontFamily};
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  paragraphBold2: css`
-    font-family: ${fontFamily};
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  label0: css`
-    font-family: ${fontFamily};
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0;
-    color: ${(p) => p.theme.colors.onBackground};
-  `,
-  label1: css`
-    font-family: ${fontFamily};
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
     letter-spacing: 0;
     color: ${(p) => p.theme.colors.onBackground};
   `,

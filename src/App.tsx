@@ -1,12 +1,10 @@
 import React from "react";
 import { DesignSystemProvider } from "./design-system";
+import { IsolatedCSS } from "./IsolatedCSS";
 
-const App: React.FC = () => {
-  return <div>Hello World</div>;
-};
 const AppWithContexts: React.FC = () => (
   <DesignSystemProvider>
-    <App />
+    <IsolatedCSS />
   </DesignSystemProvider>
 );
 
