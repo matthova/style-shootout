@@ -39,8 +39,14 @@ export const TitleText = styled("span")`
 `;
 
 export const InputArea = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
   > * {
     margin-top: 16px;
+    @media only screen and (min-width: 768px) {
+      margin-top: 32px;
+    }
+
     &:not(:last-child) {
       margin-right: 32px;
     }
